@@ -28,4 +28,3 @@ cypress/
 cypress.config.js   # Configuração do Cypress
 package.json        # Dependências do projeto
 README.md           # Este arquivo
-
