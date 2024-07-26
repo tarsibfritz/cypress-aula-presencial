@@ -1,5 +1,9 @@
 {
   "devDependencies": {
     "cypress": "^13.13.1"
+  },
+  "scripts": {
+    "cypress:run:mobile": "npx cypress run --viewportWidth=375 --viewportHeight=667",
+    "cypress:run": "npx cypress run"
   }
 }

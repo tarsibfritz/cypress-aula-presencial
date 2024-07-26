@@ -1,6 +1,5 @@
-describe('Test Bookstore Navigation and Search', function() {
+describe('Teste Livaria Leitura: Navegação e Pesquisa', function() {
 
-    // Definir a resolução da viewport antes de cada teste
     beforeEach(() => {
         cy.viewport(1280, 800);
     });
@@ -25,7 +24,13 @@ describe('Test Bookstore Navigation and Search', function() {
     });
 
     function visitHomePage() {
-        cy.visit('https://leitura.com.br/');
+        cy.visit('https://leitura.com.br/', {
+            timeout: 40000
+        });
+
+        // Verifica se um elemento específico está visível na página
+        cy.get('.container > .row > .col-sm-5 > #search > .form-control', { timeout: 60000 })
+            .should('be.visible');
     }
 
     function performEmptySearch() {
